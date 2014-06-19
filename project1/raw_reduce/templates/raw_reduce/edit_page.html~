@@ -1,0 +1,10 @@
+<h1>You are at the edit page</h1>
+<form action = "{% url 'edit_object' %}" method = "POST">
+	{% csrf_token %}
+	<input type = "text" name = "f_id" id = "f_id"><br>
+	Name:<input type = "text" name="f_name" id="f_name"/><br>
+	Tags:<input type = "text" name="f_tags" id="f_tags"/><br>
+	Content:<input type = "text" name="f_content" id="f_content"/><br>
+	<input type = "submit">	
+</form>
+<a href = "{% url 'index' %}">INDEX</a>
